@@ -486,3 +486,24 @@ Java虚拟机机制屏蔽了底层运行平台的差别，实现了“一次编�
 6.创建具体的java类
 
 选中项目，然后先建class。然后设置class名称
+  This text is {% em %}highlighted !{% endem %}
+  This text is {% em %}highlighted with **markdown**!{% endem %}
+  This text is {% em type="green" %}highlighted in green!{% endem %}
+  This text is {% em type="red" %}highlighted in red!{% endem %}
+  This text is {% em color="#ff0000" %}highlighted with a custom color!{% endem %}
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+<script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+    var gitalk = new Gitalk({
+    clientID: '2eb19afceda708b27e64', // GitHub Application Client ID
+    clientSecret: '36aedb5a30321626a8631689fee5fafd5929f612', // GitHub Application Client Secret
+    repo: 'book',              // 存放评论的仓库
+    owner: 'user',          // 仓库的创建者，
+    admin: ['user'],        // 如果仓库有多个人可以操作，那么在这里以数组形式写出
+    id: location.pathname,      // 用于标记评论是哪个页面的，确保唯一，并且长度小于50
+    });
+    gitalk.render('gitalk-container');    // 渲染Gitalk评论组件
+ </script>
